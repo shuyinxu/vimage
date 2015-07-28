@@ -2,24 +2,27 @@
 <head>
 <script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
 		<script type="text/processing" data-processing-target="mycanvas">
-
+		<script src="colors.js"></script> 
 
 void setup() { 
 
   size(700, 400); 
+  background-color(255,255,255)
 
   frameRate(30);
 
 } 
-
+//var color;
 void draw () {
+//color = #EF0B0B
     
     if (mousePressed == true ) {
         strokeWeight(8);
+		fill (89,70,67);
         point(mouseX, mouseY);
         point(mouseX, mouseY);
         point(mouseX, mouseY);
-        fill(0, 0, 0);
+        
                
     }
 }       
@@ -29,17 +32,19 @@ void draw () {
 	
 //}
 </script>	
+</head>
 <body>
 <canvas id="mycanvas"></canvas>
 
 
 
 <div palette>
-	<img src = "red.png" onClick = "change2Orange"/>
-	<img src = "orange.png"/>
-	<img src = "yellow.png"/>
-	<img src = "green.png"/>
-	<img src = "blue.png"/>
+	<img src = "red.png" onClick = "red ()"/>
+	<img src = "orange.png" onClick = "orange ()"/>
+	<img src = "yellow.png" onClick = "yellow ()"/>
+	<img src = "green.png" onClick = "green ()"/>
+	<img src = "blue.png"onClick= "blue()"/>
+</div>	
 </body>
-</head>
+
 </html>
