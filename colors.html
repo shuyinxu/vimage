@@ -2,49 +2,54 @@
 <head>
 
 <script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
-		<script type="text/processing" data-processing-target="mycanvas">
+<script type="text/processing" data-processing-target="mycanvas">
 		
-		
-		
+	//var pColor;	
+	//var penSize;	
 
 	void setup() { 
+		penSize = 10;
+		pColor = [255,255,255] ;
+		size(700, 400); 
+		background-color(255,255,255);
 
-	  size(700, 400); 
-	  background-color(255,255,255);
-
-	  frameRate(30);
+		frameRate(30);
 
 	} 
-	//var pColor = [245,67,234] ;
-
+	
+	
 	//stroke (89,70,67);
 	void draw () {
 	//color = #EF0B0B
-		
-		if (mousePressed == true ) {
-			strokeWeight(8);
+		//text(pColor[0], 15, 30);
+		if (mousePressed) {
+			strokeWeight(penSize);
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);
 			
 			
 				   
 		}
-	}     
-</script>	
-<script>	
+	}  
+	
+	//var pColor = [245,67,234] ;	
+
 	//var red = [239,11,11];
 	//var orange = [255,175,6];
 	//var yellow = [255,251,6];
 	//green = [31,255,6];
 	//blue = [6,214,255]; 
+</script>
 
+<script>
+var pColor;
 	function cOrange () {
 		pColor = [255,175,6];
 		return pColor;
 	}
 	function cRed () {
 		pColor = [239,11,11];
-		alert("red");
+		//alert("red");
 		return pColor;
 	}
 	function cYellow () {
@@ -59,6 +64,20 @@
 		pColor = [6,214,255]; 
 		return pColor;
 	}
+	function setSmall(){
+		penSize = 10;
+		return penSize;
+	}
+	
+	function setMedium(){
+			penSize = 17;
+			return penSize;
+		}
+		
+	function setLarge(){
+			penSize = 28;
+			return penSize;
+		}
 
 </script> 	
 </head>
@@ -73,7 +92,14 @@
 	<img src = "yellow.png" onclick = "cYellow()"/>
 	<img src = "green.png" onclick = "cGreen()"/>
 	<img src = "blue.png"onclick= "cBlue()"/>
-</div>	
+</div>
+<div>
+		<img src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
+	</div> 	
 </body>
 
 </html>
