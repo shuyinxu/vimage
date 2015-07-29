@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="clock.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -46,7 +47,14 @@
 			
 			<div>
 				<h2> You must draw . . . </h2>
+				<!-- <button onclick="startCount() >Start</button> -->
+				
+				<a class="ui-btn" onclick = "startCount()">Timer</a>
+				<input type="text" id="txt">
+			</div>	
+			<div>	
 				<h1 id="theme"></h1>
+				
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
 			</div>
 			
@@ -58,6 +66,9 @@
 				<img src = "yellow.png" onclick = "cYellow()"/>
 				<img src = "green.png" onclick = "cGreen()"/>
 				<img src = "blue.png"onclick= "cBlue()"/>
+				<img src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/>
+				<img src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/>
+				<img src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
 				<img src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div>
 			
@@ -75,6 +86,8 @@
 			
 		</div>
 	</div>
+	
+		
 	
 </body>
 
