@@ -11,7 +11,7 @@
 		penSize = 10;
 		pColor = [255,255,255] ;
 		size(700, 400); 
-		background-color(255,255,255);
+		background(250,250,250);
 
 		frameRate(30);
 
@@ -64,6 +64,14 @@ var pColor;
 		pColor = [6,214,255]; 
 		return pColor;
 	}
+	function cBlack () {
+		pColor = [0,0,0]; 
+		return pColor;
+	}
+	function erase () {
+		pColor = [250,250,250]; 
+		return pColor;
+	}
 	function setSmall(){
 		penSize = 10;
 		return penSize;
@@ -87,11 +95,13 @@ var pColor;
 
 
 <div>
-	<img src = "red.png" onClick = "cRed()"/>
-	<img src = "orange.png" onclick = "cOrange()"/>
-	<img src = "yellow.png" onclick = "cYellow()"/>
-	<img src = "green.png" onclick = "cGreen()"/>
-	<img src = "blue.png"onclick= "cBlue()"/>
+	<img src = "red.png" onClick = "cRed()" style = "width:70px; height:70px;"/>
+	<img src = "orange.png" onclick = "cOrange()" style = "width:70px; height:70px;"/>
+	<img src = "yellow.png" onclick = "cYellow()" style = "width:70px; height:70px;"/>
+	<img src = "green.png" onclick = "cGreen()" style = "width:70px; height:70px;"/>
+	<img src = "blue.png"onclick= "cBlue()" style = "width:70px; height:70px;"/>
+	<img src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
+	<img src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 </div>
 <div>
 		<img src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
