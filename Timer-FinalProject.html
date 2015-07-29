@@ -1,0 +1,38 @@
+<!DOCTYPE HTML> 
+<html> 
+<body> 
+
+<button onclick="startCount()">Start</button>
+<input type="text" id="txt">
+
+
+<script>
+var a = 30;
+var t;
+var timer_on = 0;
+var z = "Time is up"; 
+
+function count() {
+    document.getElementById("txt").value = a;
+    a = a - 1; 
+    t = setTimeout(function(){ count() }, 1000);
+	if (document.getElementById("txt").value < 1) {
+		document.getElementById("txt").value = z;
+	}
+}
+
+
+
+
+function startCount() {
+    if (!timer_on) {
+        timer_on = 1;
+        count()
+		
+		}
+    }
+
+</script>
+
+ </body> 
+</html> 
