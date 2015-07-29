@@ -1,11 +1,9 @@
-//var pColor;
-function cOrange () {
-	pColor = [255,175,6];
-	return pColor;
-}
 function cRed () {
 	pColor = [239,11,11];
-	//alert("red");
+	return pColor;
+}
+function cOrange () {
+	pColor = [255,175,6];
 	return pColor;
 }
 function cYellow () {
@@ -42,3 +40,4 @@ function getTheme(){
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }
+
