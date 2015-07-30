@@ -1,9 +1,25 @@
+/* keeps canvas in the center */
 canvas {
     padding: 0;
     margin: auto;
     display: block;
 }
+#butt{
+	height: 70px;
+    width: 70px;
+	margin: 1;
+	padding: 1;
+	position: relative;
+	float: center;
+	left: 323%;
+}
 
+.mytab {
+    width: 7% !important;  /* 12.5% for 8 tabs wide */
+    clear: none !important;  /* Prevent line break caused by ui-block-a */
+}
+
+/* hover effects on pen/color options */
 .hvr-glow {
   display: inline-block;
   vertical-align: middle;
@@ -21,6 +37,7 @@ canvas {
 .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
+
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;

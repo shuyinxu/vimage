@@ -30,7 +30,7 @@
 </head>
 
 <body>
-
+<!-- START SCREEN -->
 	<div data-role="page" id="start">
 		<div data-role="main" class="ui-content" align="center">
 			<a href="#canvas" class="ui-btn">START GAME</a>
@@ -43,49 +43,50 @@
 			<div align="center"> 
 				<h1> V I M A G E </h1>
 			</div>
-			
+<!-- TIMER -->
 			<div>
 				<h2> You must draw . . . </h2>
 				<a class="ui-btn" onclick = "startCount()">Timer</a>
 				<input type="text" id="txt">
 			</div>	
-			
+<!-- RANDOM SUBJECT GENERATOR -->
 			<div>	
 				<h1 id="theme"></h1>
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
 			</div>
-			
+<!-- DRAWING AREA -->
 			<canvas id="mycanvas" style="border:5px double #777775;" align="center"></canvas>
-				</br>
-				
-			<div align="center">
-				<img class="hvr-glow" id = "red" src = "red.png" onClick = "cRed()"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "orange.png" onclick = "cOrange()"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "yellow.png" onclick = "cYellow()"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "green.png" onclick = "cGreen()"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "blue.png"onclick= "cBlue()"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
-			</div>
-			
 			</br>
-			
+<!-- COLOR OPTIONS -->
+			<div data-role="navbar">
+				<ul>
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "blue.png"onclick= "cBlue()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/> </a> </li>
+				</ul>
+			</div>		
+			</br>
+<!-- PEN OPTIONS -->
 			<div align="center">
 				<img class="hvr-grow" src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div> 	
 			
 			</br>

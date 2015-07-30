@@ -1,3 +1,4 @@
+//SETS PEN COLOR
 function cRed () {
 	pColor = [239,11,11];
 	return pColor;
@@ -47,17 +48,18 @@ function setLarge(){
 	return penSize;
 }
 
+//RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
-	var subject = ["ruler","apple","cat", "pencil", "cup"];
+	var subject = ["ruler","apple","cat", "pencil", "cup"]; //can manually add subjects to list
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }
 
-//timer
+//TIMER
 var a = 30;
 var t;
 var timer_on = 0;
-var z = "Time is up"; 
+var z = "TIME IS UP!"; 
 
 function count() {
     document.getElementById("txt").value = a;
@@ -72,6 +74,5 @@ function startCount() {
     if (!timer_on) {
         timer_on = 1;
         count()
-		
-		}
-    }
+	}
+}
