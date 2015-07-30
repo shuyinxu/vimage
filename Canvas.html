@@ -24,7 +24,11 @@
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);		   
 		}
-	}  
+		
+	}
+	
+
+
 </script>
 
 
@@ -46,16 +50,22 @@
 			</div>
 			
 			<div>
-				<h2> You must draw . . . </h2>
-				<!-- <button onclick="startCount() >Start</button> -->
+				
+			<!-- 	<h2> You must draw . . . </h2> -->
+	
 				
 				<a class="ui-btn" onclick = "startCount()">Timer</a>
-				<input type="text" id="txt">
+				<input type="text" id="txt"/>
+				<a class="ui-btn" onclick = "stopTimer()">Pause</a>
+				
 			</div>	
 			<div>	
-				<h1 id="theme"></h1>
 				
-				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+				<h2> You must draw . . . </h2>
+				<h1 id="theme"></h1>
+ 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+				
+				
 			</div>
 			
 			<canvas id="mycanvas" style="border:5px double #777775;" align="center"></canvas>
@@ -70,6 +80,18 @@
 				<img src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/>
 				<img src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
 				<img src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
+			</div>
+			<div>
+			<script>
+				function promptName() {
+					var name = prompt("Please name your piece", "");
+					if (person != null) {
+						document.getElementById("demo").innerHTML =
+						"Hello " + person + "! How are you today?";
+					}
+				}
+			</script>	
+				<a class="ui-btn" onclick = "promptName(), ">save</a>
 			</div>
 			
 			<div align="center">
@@ -86,7 +108,12 @@
 			
 		</div>
 	</div>
-	
+	<div id="countdown">
+    <div id="minutes" style="float:left">00</div>
+    <div style="float:left">:</div>
+    <div id="seconds" style="float:left">00</div>
+	</div>
+	<div id="aftercount" style="display:none">Next Player</div>
 		
 	
 </body>
