@@ -1,8 +1,10 @@
 <html>
 <head>
-
+<button onclick="startCount()">Start</button>
+<input type="text" id="txt">
 <script src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
+
 		
 	//var pColor;	
 	//var penSize;	
@@ -96,10 +98,38 @@ var pColor;
 		}
 
 </script> 	
+<script>
+var a = 30;
+var t;
+var timer_on = 0;
+var z = "Time is up"; 
+
+function count() {
+    document.getElementById("txt").value = a;
+    a = a - 1; 
+    t = setTimeout(function(){ count() }, 1000);
+	if (document.getElementById("txt").value < 1) {
+		document.getElementById("txt").value = z;
+	}
+}
+
+
+
+
+function startCount() {
+    if (!timer_on) {
+        timer_on = 1;
+        count()
+		
+		}
+    }
+
+</script>
 </head>
 <body>
 <canvas id="mycanvas"></canvas>
 
+<div id="fancyClock"></div>
 
 
 <div>
@@ -114,12 +144,14 @@ var pColor;
 	<img src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 </div>
 <div>
-		<img src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<img src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
-	</div> 	
+	<img src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
+</div> 	
+
+
 </body>
 
 </html>

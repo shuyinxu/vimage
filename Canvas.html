@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="clock.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -40,17 +41,23 @@
 		<div data-role="main" class="ui-content">
 		
 			<div align="center"> 
-				<h1> [enter game title here] </h1>
+				<h1> V I M A G E </h1>
 			</div>
 			
 			<div>
 				<h2> You must draw . . . </h2>
+				<a class="ui-btn" onclick = "startCount()">Timer</a>
+				<input type="text" id="txt">
+			</div>	
+			
+			<div>	
 				<h1 id="theme"></h1>
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
 			</div>
 			
 			<canvas id="mycanvas" style="border:5px double #777775;" align="center"></canvas>
 				</br>
+				
 			<div align="center">
 				<img class="hvr-glow" id = "red" src = "red.png" onClick = "cRed()"/>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,9 +69,17 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-glow" src = "blue.png"onclick= "cBlue()"/>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div>
-				</br>
+			
+			</br>
+			
 			<div align="center">
 				<img class="hvr-grow" src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -72,13 +87,17 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
 			</div> 	
-				</br>
+			
+			</br>
+			
 			<div data-role="footer">
 				<h1> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h1>
 			</div>
 			
 		</div>
 	</div>
+	
+		
 	
 </body>
 
