@@ -25,7 +25,7 @@
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);		   
 		}
-	}  
+	}
 </script>
 </head>
 
@@ -46,16 +46,27 @@
 <!-- TIMER -->
 			<div>
 				<h2> You must draw . . . </h2>
+
 				<a class="ui-btn" onclick = "startCount()">Timer</a>
-				<input type="text" id="txt">
+				<input type="text" id="txt"/>
+				<a class="ui-btn" onclick = "stopTimer()">Pause</a>
+				
 			</div>	
 <!-- RANDOM SUBJECT GENERATOR -->
 			<div>	
+
 				<h1 id="theme"></h1>
-				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+
+ 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+
 			</div>
 <!-- DRAWING AREA -->
 			<canvas id="mycanvas" style="border:5px double #777775;" align="center"></canvas>
+			
+			<div>
+				<a class="ui-btn" onclick = "promptName(), ">save</a>
+			</div>
+			
 			</br>
 <!-- COLOR OPTIONS -->
 			<div data-role="navbar">
@@ -97,7 +108,12 @@
 			
 		</div>
 	</div>
-	
+	<!-- <div id="countdown">
+    <div id="minutes" style="float:left">00</div>
+    <div style="float:left">:</div>
+    <div id="seconds" style="float:left">00</div>
+	</div>
+	<div id="aftercount" style="display:none">Next Player</div> -->
 		
 	
 </body>
