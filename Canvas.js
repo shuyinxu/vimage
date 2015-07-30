@@ -56,18 +56,23 @@ function getTheme(){
 }
 
 //TIMER
-var a = 30;
+var a = 3;
 var t;
 var timer_on = 0;
 var z = "TIME IS UP!"; 
+var t;
 
 function count() {
     document.getElementById("txt").value = a;
     a = a - 1; 
     t = setTimeout(function(){ count() }, 1000);
+	
 	if (document.getElementById("txt").value < 1) {
 		document.getElementById("txt").value = z;
+		alert("Next Player");
+		a = 3;
 	}
+	
 }
 
 function startCount() {
