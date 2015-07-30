@@ -50,7 +50,7 @@ function setLarge(){
 }
 
 function getTheme(){
-	var subject = ["ruler","apple","cat", "pencil", "cup"];
+	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE"];
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }

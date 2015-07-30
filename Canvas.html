@@ -1,5 +1,6 @@
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="clock.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -30,6 +31,10 @@
 
 </head>
 
+<style>
+h1 {color:gray;font-size:75px;font-family:Pacifico;}
+</style>
+
 <body>
 
 	<div data-role="page" id="start">
@@ -42,7 +47,7 @@
 		<div data-role="main" class="ui-content">
 		
 			<div align="center"> 
-				<h1> [enter game title here] </h1>
+				<h1> Vimage </h1>
 			</div>
 			
 			<div>
@@ -53,7 +58,7 @@
 				<input type="text" id="txt">
 			</div>	
 			<div>	
-				<h1 id="theme"></h1>
+				<h2 id="theme"></h2>
 				
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
 			</div>
