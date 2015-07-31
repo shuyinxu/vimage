@@ -76,7 +76,7 @@ function count() {
 
     a = a - 1; 
 	
-    t = setTimeout(function(){ count() }, 1000);
+    t = setTimeout(function(){ count();setTimeout(reset, 1750); }, 1000);
 	
 	if (document.getElementById("txt").value < 1) {
 		document.getElementById("txt").value = z;
@@ -84,6 +84,8 @@ function count() {
 		getTheme();
 		a = 20;
 	}
+	
+	
 }
 
 function startCount() {
@@ -124,7 +126,7 @@ function promptName() {
 	}
 }
 
-function stopTimer () {
+function pauseTimer () {
 	
 	alert ("Game Paused");
 	
@@ -134,6 +136,15 @@ page.open('http://github.com/', function() {
   page.render('github.png');
   phantom.exit();
 });
-
+function stopTimer (){
+	 clearTimeout(t);
+	 document.getElementById("txt").value = "Game Over"
+	 
+}
+function reset(){
+  $("img").removeClass("hinge");
+  $(".status").text("");
+  $("button.stop").prop("disabled", false);
+}
 
 
