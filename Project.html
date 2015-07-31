@@ -27,16 +27,21 @@ li{
 
 <p> Click button to get subject </p>
 
+<script>
+var School= 1;
+var Park= 2;
+var Rodeo= 3;
+var Food= 4;
+var Space= 5;
+
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+</script
 
 <button type="button" 
-onclick="myFunction()">Click Me!</button>
-
-<script>
-function myFunction(){
-document.getElementById("Emagination").innerHTML = random.generate();
-}
-</script>
-
+onclick="getRandomArbitrary()">Click Me!</button>
 
 </ul>
 <body/>

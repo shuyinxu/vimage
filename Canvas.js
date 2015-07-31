@@ -1,10 +1,18 @@
+//var pColor;
+
 //SETS PEN COLOR
 function cRed () {
 	pColor = [239,11,11];
 	return pColor;
 }
+
 function cOrange () {
 	pColor = [255,175,6];
+	return pColor;
+}
+function cRed () {
+	pColor = [239,11,11];
+	//alert("red");
 	return pColor;
 }
 function cYellow () {
@@ -50,18 +58,17 @@ function setLarge(){
 
 //RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
-	var subject = ["ruler","apple","cat", "pencil", "cup"]; //can manually add subjects to list
+	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE","person:JESSICA","person:ALANA","person:RACHEL","person:SHUYIN","person:TIFFANY"];
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }
 
 //TIMER
-var a = 5;
+var a = 20;
 var t;
 var timer_on = 0;
 var z = "TIME IS UP!"; 
 var t;
-
 
 function count() {
 	//do {
@@ -75,7 +82,7 @@ function count() {
 		document.getElementById("txt").value = z;
 		alert("Next Player");
 		getTheme();
-		a = 5;
+		a = 20;
 	}
 }
 
@@ -85,6 +92,7 @@ function startCount() {
         count()
 	}
 }
+
 
 var sTime = new Date().getTime();
 var countDown = 30;
@@ -115,8 +123,13 @@ function promptName() {
 		"Hello " + person + "! How are you today?";
 	}
 }
+
 function stopTimer () {
 	
 	alert ("Game Paused");
 	
 }
+
+
+
+
