@@ -15,6 +15,16 @@ canvas {
 	left: 323%;
 }
 
+h1 {
+	color:gray;
+	font-size:75px;
+	font-family:Pacifico;
+	text-align:center
+}
+li {
+	text-align:center
+}
+
 .mytab {
     width: 7% !important;  /* 12.5% for 8 tabs wide */
     clear: none !important;  /* Prevent line break caused by ui-block-a */
