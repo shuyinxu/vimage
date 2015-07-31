@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 //var pColor;
-=======
+
 //SETS PEN COLOR
 function cRed () {
 	pColor = [239,11,11];
 	return pColor;
 }
->>>>>>> origin/master
+
 function cOrange () {
 	pColor = [255,175,6];
 	return pColor;
@@ -59,7 +58,6 @@ function setLarge(){
 
 //RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
-
 	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE","person:JESSICA","person:ALANA","person:RACHEL","person:SHUYIN","person:TIFFANY"];
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
@@ -71,7 +69,6 @@ var t;
 var timer_on = 0;
 var z = "TIME IS UP!"; 
 var t;
-
 
 function count() {
 	//do {
@@ -88,20 +85,13 @@ function count() {
 	}
 }
 
-
-
-
 function startCount() {
     if (!timer_on ) {
         timer_on = 1;
         count()
-
-		
-		}
-    }
-
 	}
 }
+
 
 var sTime = new Date().getTime();
 var countDown = 30;

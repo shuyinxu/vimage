@@ -80,24 +80,9 @@ li{
 
 				<h1 id="theme"></h1>
 
- 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
-
 			</div>
 <!-- DRAWING AREA -->
 			<canvas id="mycanvas" style="border:5px double #777775;" align="center"></canvas>
-
-				
-			<div align="center">
-				<img src = "red.png" onClick = "cRed()"/>
-				<img src = "orange.png" onclick = "cOrange()"/>
-				<img src = "yellow.png" onclick = "cYellow()"/>
-				<img src = "green.png" onclick = "cGreen()"/>
-				<img src = "blue.png"onclick= "cBlue()"/>
-				<img src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/>
-				<img src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/>
-				<img src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
-				<img src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
-			</div>
 
 			<div>
 				<a class="ui-btn" onclick = "promptName(), ">save</a>
@@ -128,17 +113,13 @@ li{
 <!-- PEN OPTIONS -->
 
 			<div align="center">
-				<img src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
+				<img class="hvr-grow" src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
+				<img class="hvr-grow" src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-				<img src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
-
 				<img class="hvr-grow" src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
-
 			</div> 	
 			
 			<div data-role="footer">
