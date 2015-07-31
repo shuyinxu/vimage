@@ -56,7 +56,7 @@ function getTheme(){
 }
 
 //TIMER
-var a = 3;
+var a = 5;
 var t;
 var timer_on = 0;
 var z = "TIME IS UP!"; 
@@ -74,7 +74,8 @@ function count() {
 	if (document.getElementById("txt").value < 1) {
 		document.getElementById("txt").value = z;
 		alert("Next Player");
-		a = 3;
+		getTheme();
+		a = 5;
 	}
 }
 
@@ -114,4 +115,8 @@ function promptName() {
 		"Hello " + person + "! How are you today?";
 	}
 }
-
+function stopTimer () {
+	
+	alert ("Game Paused");
+	
+}
