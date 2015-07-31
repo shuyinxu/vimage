@@ -22,9 +22,11 @@ h1 {
 	text-align:center
 }
 li {
-	text-align:center
+	text-align:left
 }
-
+ul { 
+	list-style-type: none 
+}
 .mytab {
     width: 7% !important;  /* 12.5% for 8 tabs wide */
     clear: none !important;  /* Prevent line break caused by ui-block-a */
