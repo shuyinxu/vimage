@@ -10,6 +10,7 @@
 <script src="Canvas.js"></script>
 <link rel="stylesheet" type="text/css" href="Canvas.css">
 <script type="text/processing" data-processing-target="mycanvas"> 
+
 	
 	void setup() { 
 		penSize = 9;
@@ -25,12 +26,23 @@
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);		   
 		}
+	}	
+	//SAVES IMAGE
+	void keyPressed() {
+		if (key == 's') {
+			saveFrame();
+		}
 	}
+
+
+	
+	
 </script>
 
 </head>
 
 <body>
+phantomjs save.js
 <!-- START SCREEN -->
 	<div data-role="page" id="start">
 		<div data-role="main" class="ui-content">
@@ -62,20 +74,27 @@
 				<h1> Vimage </h1>
 			</div>
 <!-- TIMER -->
-			<div>
-				<h2> You must draw . . . </h2>
-
-				<!-- <button onclick="startCount() >Start</button> -->
-				
-				<a class="ui-btn" onclick = "startCount()">Timer</a>
-				<input type="text" id="txt"/>
-				<a class="ui-btn" onclick = "stopTimer()">Pause</a>
-				
-			</div>	
 			<div>	
+				<h2> You must draw . . . </h2>
 				<h2 id="theme"></h2>
 				
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+				
+			</div>	
+			
+			
+			<div>
+				
+
+				<!-- <button onclick="startCount() >Start</button> -->
+				
+				<a class="ui-btn" onclick = "startCount()">Start Timer</a>
+				<a class="ui-btn" onclick = "stopTimer()">Pause Timer</a>
+				<input type="text" id="txt" style= "font-size: 48px; text-align:center; "/>
+				
+				
+			</div>	
+			
 
 <!-- RANDOM SUBJECT GENERATOR -->
 			<div>	
@@ -126,9 +145,7 @@
 			
 
 			</br>
-			<div>
-				<a class="ui-btn" onclick = "promptName(), ">save</a>
-			</div>
+			
 
 
 			<div data-role="footer">
