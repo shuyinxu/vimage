@@ -58,7 +58,7 @@ function setLarge(){
 
 //RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
-	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE","person:JESSICA","person:ALANA","person:RACHEL","person:SHUYIN","person:TIFFANY"];
+	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE","people:JESSICA","people:ALANA","people:RACHEL","people:SHUYIN","people:TIFFANY"];
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }
@@ -129,7 +129,11 @@ function stopTimer () {
 	alert ("Game Paused");
 	
 }
-
+var page = require('webpage').create();
+page.open('http://github.com/', function() {
+  page.render('github.png');
+  phantom.exit();
+});
 
 
 
