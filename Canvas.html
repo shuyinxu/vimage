@@ -25,7 +25,7 @@
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);		   
 		}
-	}  
+	}
 </script>
 
 
@@ -39,7 +39,7 @@ li{
 </style>
 
 <body>
-
+<!-- START SCREEN -->
 	<div data-role="page" id="start">
 		<div data-role="main" class="ui-content">
 		<a href="#canvas" class="ui-btn">START GAME</a>
@@ -59,21 +59,33 @@ li{
 			<div align="center"> 
 				<h1> Vimage </h1>
 			</div>
-			
+<!-- TIMER -->
 			<div>
 				<h2> You must draw . . . </h2>
+
 				<!-- <button onclick="startCount() >Start</button> -->
 				
 				<a class="ui-btn" onclick = "startCount()">Timer</a>
-				<input type="text" id="txt">
+				<input type="text" id="txt"/>
+				<a class="ui-btn" onclick = "stopTimer()">Pause</a>
+				
 			</div>	
 			<div>	
 				<h2 id="theme"></h2>
 				
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+
+<!-- RANDOM SUBJECT GENERATOR -->
+			<div>	
+
+				<h1 id="theme"></h1>
+
+ 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+
 			</div>
-			
+<!-- DRAWING AREA -->
 			<canvas id="mycanvas" style="border:5px double #777775;" align="center"></canvas>
+
 				
 			<div align="center">
 				<img src = "red.png" onClick = "cRed()"/>
@@ -86,13 +98,47 @@ li{
 				<img src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/>
 				<img src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div>
+
+			<div>
+				<a class="ui-btn" onclick = "promptName(), ">save</a>
+			</div>
 			
+			</br>
+<!-- COLOR OPTIONS -->
+			<div data-role="navbar">
+				<ul>
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "blue.png"onclick= "cBlue()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/> </a> </li>
+				</ul>
+			</div>		
+			</br>
+<!-- PEN OPTIONS -->
+
 			<div align="center">
 				<img src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 				<img src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
+
+				<img class="hvr-grow" src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
+
 			</div> 	
 			
 			<div data-role="footer">
@@ -101,7 +147,12 @@ li{
 			
 		</div>
 	</div>
-	
+	<!-- <div id="countdown">
+    <div id="minutes" style="float:left">00</div>
+    <div style="float:left">:</div>
+    <div id="seconds" style="float:left">00</div>
+	</div>
+	<div id="aftercount" style="display:none">Next Player</div> -->
 		
 	
 </body>

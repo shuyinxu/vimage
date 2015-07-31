@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 //var pColor;
+=======
+//SETS PEN COLOR
+function cRed () {
+	pColor = [239,11,11];
+	return pColor;
+}
+>>>>>>> origin/master
 function cOrange () {
 	pColor = [255,175,6];
 	return pColor;
@@ -49,24 +57,34 @@ function setLarge(){
 	return penSize;
 }
 
+//RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
+
 	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE","person:JESSICA","person:ALANA","person:RACHEL","person:SHUYIN","person:TIFFANY"];
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }
 
-//timer
-var a = 30;
+//TIMER
+var a = 3;
 var t;
 var timer_on = 0;
-var z = "Time is up"; 
+var z = "TIME IS UP!"; 
+var t;
+
 
 function count() {
+	//do {
     document.getElementById("txt").value = a;
+
     a = a - 1; 
+	
     t = setTimeout(function(){ count() }, 1000);
+	
 	if (document.getElementById("txt").value < 1) {
 		document.getElementById("txt").value = z;
+		alert("Next Player");
+		a = 3;
 	}
 }
 
@@ -74,9 +92,45 @@ function count() {
 
 
 function startCount() {
-    if (!timer_on) {
+    if (!timer_on ) {
         timer_on = 1;
         count()
+
 		
 		}
     }
+
+	}
+}
+
+var sTime = new Date().getTime();
+var countDown = 30;
+
+function UpdateTime() {
+    var cTime = new Date().getTime();
+    var diff = cTime - sTime;
+    var seconds = countDown - Math.floor(diff / 1000);
+    if (seconds >= 0) {
+        var minutes = Math.floor(seconds / 60);
+        seconds -= minutes * 60;
+        $("#minutes").text(minutes < 10 ? "0" + minutes : minutes);
+        $("#seconds").text(seconds < 10 ? "0" + seconds : seconds);
+    } else {
+        $("#countdown").hide();
+        $("#aftercount").show();
+        clearInterval(counter);
+    }
+}
+
+UpdateTime();
+var counter = setInterval(UpdateTime, 500);	
+
+function promptName() {
+	var name = prompt("Please name your piece", "");
+	if (person != null) {
+		document.getElementById("demo").innerHTML =
+		"Hello " + person + "! How are you today?";
+	}
+}
+
+
