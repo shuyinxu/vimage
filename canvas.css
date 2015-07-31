@@ -4,6 +4,9 @@ canvas {
     margin: auto;
     display: block;
 }
+.background{
+	background: linear-gradient(AliceBlue, LavenderBlush);
+}
 
 #butt{
 	height: 70px;
@@ -18,8 +21,14 @@ canvas {
 h1 {
 	color:gray;
 	font-size:75px;
-	font-family:Pacifico;
-	text-align:center
+	font-family:Yellowtail;
+	text-align:center;
+}
+h2{
+	color:gray;
+	font-size:50px;
+	font-family:Raleway;
+	text-align:center;
 }
 li {
 	text-align:center
