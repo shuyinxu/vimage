@@ -1,9 +1,9 @@
 <html>
 <head>
 <!-- <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="clock.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -35,34 +35,75 @@
 			saveFrame();
 		}
 	}
+	//ClEAR CANVAS
+	void keyPressed() { 
+		if (key == 'c') {
+			context.clearRect(0, 0, canvas.width, canvas.height);
+		}
+	}
 </script>
 
 </head>
 
 <body>
+
+
 <!-- START SCREEN -->
 	<div data-role="page" id="start">
+		
 		<div data-role="main" class="ui-content background">
 			<h1> Vimage </h1>
-
+			<a href="#canvas" class="ui-btn" style="font-family:Raleway;">START GAME</a>
+			<a href="#tutorial" class="ui-btn" style="font-family:Raleway;">HOW TO PLAY</a>
 			
-			<a href="#canvas" class="ui-btn">START GAME</a>
-			<a href="#tutorial" class="ui-btn">How to Play</a>
+		</div>
+		
+		<div data-role="footer">
+				<h2> We, the creators, hope that those who experience our game continue to share, influence, and inspire creativity around the world. </br></br> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
 		</div>
 	</div>
 	
 	<div data-role="page" id="tutorial">
-		<div data-role="main" class="ui-content">
-		<h1> Starting Your Creative Journey </h1>
-		<h2>Instructions</h2>
-		<p> In this game you will test your vivid imagination and creative abilities. Once you start drawing you will get a subject 
-		and a time limit. Try to complete the drawing within the time limit. The drawing will pass on to player 2 regardless if finished or not.To
-		save your beautiful drawing press the s key on your keyboard.We hope that this game will help you to share,influence, and inspire creativity around the world.</p>
-	
+
+		<div data-role="header"> 
+			<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
+			<h2>Tutorial</h2>
+			<a href="#canvas" data-icon="check" style="font-family:Raleway;">Play the Game!</a>
+		</div>
+		
+		<div data-role="main" class="ui-content background">
+			<h1 style="font-size:50px"> Using your Vivid Imagination with Vimage </h1>
+			<p> 1. Select a category of subjects to draw on the home page.
+			</br></br> 2. Upon loading the canvas, Player 1 must draw their received subject as fast as they can within the time limit.
+			</br></br> 3.  The timer will go off to prompt Player 2 to start. 
+			</br></br> 4. Player 2 must then transform the previous drawing into their own assigned subject, which will also be within the category.
+			<h2 style="font-size:35px;text-align:left;"> Extra Features </h2>
+			<p> - To end the game, click 'End Game' at the bottom of the page.</p>
+			<p> - Save your beautiful drawing by pressing the 'S' key on your keyboard.</p>
+			
+			<!-- <h2> Subjects For The Game </h2>
+				<ul id="Vimage">
+					<li>School</li>
+					<li>Park</li>
+					<li>Animals</li>
+					<li>Food</li>
+					<li>Space</li>
+					<li>People</li>
+				</ul> -->
+		</div>
+		
+		<div data-role="footer">
+				<h2> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
 		</div>
 	</div>
 
 	<div data-role="page" id="canvas">
+		<div data-role="header"> 
+			<a href="#start" data-icon="home" style="font-family:Raleway;">Go Home</a>
+			<h2>Canvas</h2> 
+			<a href="#tutorial" data-icon="info" style="font-family:Raleway;">How to Play</a>
+		</div>
+		
 		<div data-role="main" class="ui-content background">
 		
 			<div align="center"> 
@@ -73,7 +114,7 @@
 				<h2> You must draw . . . </h2>
 				<h2 id="theme"></h2>
 				
-				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
+				<a class="ui-btn" onclick = "getTheme()" style="font-family:Raleway;">What do I draw?</a>
 				
 			</div>	
 			
@@ -88,8 +129,9 @@
 			<div>
 				<!-- <button onclick="startCount() >Start</button> -->
 				
-				<a class="ui-btn" onclick = "startCount()">Start Timer</a>
-				<a class="ui-btn" onclick = "stopTimer()">Pause Timer</a>
+				<a class="ui-btn" onclick = "startCount()" style="font-family:Raleway;">Start Timer</a>
+				<a class="ui-btn" onclick = "pauseTimer()" style="font-family:Raleway;">Pause Timer</a>
+
 				<input type="text" id="txt" style= "font-size: 48px; text-align:center; "/>
 				
 				
@@ -136,11 +178,20 @@
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div> 	
 			
+			<button onclick="goBack()">Go Back</button>
 
+<!-- Return Button -->
+
+			<script>
+			function goBack() {
+				window.history.back();
+			}
+			</script>
+			
 			</br>
 
 			<div>
-				<a class="ui-btn" onclick = "promptName(), ">save</a>
+				<a class="ui-btn" onclick = "stopTimer()" style="font-family:Raleway;"> End Game </a>
 			</div>
 
 

@@ -1,11 +1,9 @@
 //var pColor;
-
 //SETS PEN COLOR
 function cRed () {
 	pColor = [239,11,11];
 	return pColor;
 }
-
 function cOrange () {
 	pColor = [255,175,6];
 	return pColor;
@@ -73,11 +71,8 @@ var t;
 function count() {
 	//do {
     document.getElementById("txt").value = a;
-
     a = a - 1; 
-	
-    t = setTimeout(function(){ count() }, 1000);
-	
+    t = setTimeout(function(){ count();setTimeout(reset, 1750); }, 1000);
 	if (document.getElementById("txt").value < 1) {
 		document.getElementById("txt").value = z;
 		alert("Next Player");
@@ -92,7 +87,6 @@ function startCount() {
         count()
 	}
 }
-
 
 var sTime = new Date().getTime();
 var countDown = 30;
@@ -124,16 +118,33 @@ function promptName() {
 	}
 }
 
-function stopTimer () {
+function pauseTimer () {
 	
 	alert ("Game Paused");
 	
 }
-var page = require('webpage').create();
+
+/* var page = require('webpage').create();
 page.open('http://github.com/', function() {
   page.render('github.png');
   phantom.exit();
+}); */
+
+function stopTimer (){
+	 clearTimeout(t);
+	 document.getElementById("txt").value = "Game Over"
+	 
+}
+
+function reset(){
+  $("img").removeClass("hinge");
+  $(".status").text("");
+  $("button.stop").prop("disabled", false);
+}
+
+$(document).ready(function(){
+    $('a.back').click(function(){
+        parent.history.back();
+        return false;
+    });
 });
-
-
-
