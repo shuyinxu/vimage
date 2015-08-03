@@ -53,10 +53,13 @@ function setLarge(){
 	penSize = 28;
 	return penSize;
 }
-
+function fillAll() {
+	penSize = 2000000; 
+	return penSize; 
+}
 //RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
-	var subject = ["space:ASTRONAUT","food:APPLE","animals:CAT", "animals:HORSE", "space:MOON","food:PIZZA","park:TREE","people:JESSICA","people:ALANA","people:RACHEL","people:SHUYIN","people:TIFFANY"];
+	var subject = ["space: ASTRONAUT","food: APPLE","animals: CAT", "animals: HORSE", "space: MOON","food: PIZZA","park: TREE","people: JESSICA","people: ALANA","people: RACHEL","people: SHUYIN","people: TIFFANY"];
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
 }
@@ -124,11 +127,11 @@ function pauseTimer () {
 	
 }
 
-var page = require('webpage').create();
+/* var page = require('webpage').create();
 page.open('http://github.com/', function() {
   page.render('github.png');
   phantom.exit();
-});
+}); */
 
 function stopTimer (){
 	 clearTimeout(t);
@@ -142,4 +145,9 @@ function reset(){
   $("button.stop").prop("disabled", false);
 }
 
-
+$(document).ready(function(){
+    $('a.back').click(function(){
+        parent.history.back();
+        return false;
+    });
+});
