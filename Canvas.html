@@ -58,16 +58,7 @@
 		<p> In this game you will test your vivid imagination and creative abilities. Once you start drawing you will get a subject 
 		and a time limit. Try to complete the drawing within the time limit. The drawing will pass on to player 2 regardless if finished or not.To
 		save your beautiful drawing press the s key on your keyboard.We hope that this game will help you to share,influence, and inspire creativity around the world.</p>
-		<h2> Subjects For The Game </h2>
-			<ul id="Vimage">
-				<li>School</li>
-				<li>Park</li>
-				<li>Animals</li>
-				<li>Food</li>
-				<li>Space</li>
-				<li>People</li>
-			</ul>
-				
+	
 		</div>
 	</div>
 
@@ -78,7 +69,6 @@
 				<h1> Vimage </h1>
 			</div>
 <!-- TIMER -->
-
 			<div>	
 				<h2> You must draw . . . </h2>
 				<h2 id="theme"></h2>
@@ -86,6 +76,14 @@
 				<a class="ui-btn" onclick = "getTheme()">What do I draw?</a>
 				
 			</div>	
+			
+		<p id="demo">
+		<button type="button" onclick="myFunction()">Click it for list of subjects</button>
+		<script>
+		function myFunction(){
+		document.getElementById("demo").innerHTML = "<p class=menu> <li>School</li> <li> Park </li> <li> Animals</li><li> Food</li> <li> Space</li> <li> People </li>";
+	}
+	</script>
 			
 			<div>
 				<!-- <button onclick="startCount() >Start</button> -->
