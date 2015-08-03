@@ -9,7 +9,7 @@ canvas {
 	background: linear-gradient(AliceBlue, LavenderBlush);
 }
 
-#butt{
+.butt{
 	height: 70px;
     width: 70px;
 	margin: 1;
@@ -17,6 +17,16 @@ canvas {
 	position: relative;
 	float: center;
 	left: 600%; /* 323 */
+}
+
+.but{
+	height: 70px;
+    width: 70px;
+	margin: 1;
+	padding: 1;
+	position: relative;
+	float: center;
+	left: 123%; /* 323 */
 }
 
 h1 {
@@ -37,7 +47,7 @@ p{
 	font-family:Raleway;
 }
 li {
-	text-align:left
+	text-align:center-left
 }
 
 ul { 
