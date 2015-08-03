@@ -57,6 +57,10 @@ function fillAll() {
 	penSize = 2000000; 
 	return penSize; 
 }
+function goBack() {
+	window.history.back();
+}
+
 //RANDOMIZES SUBJECT TO DRAW
 var space = ["astronaut","moon","planets", "solar system","space ship","rocket", "aliens","stars"];
 var food=["pizza","in and out ", "french fries", "sandwiches","cake","ice cream","steak","noodles","rice","lasagne", "salad","milk tea"];
