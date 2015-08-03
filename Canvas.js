@@ -1,4 +1,3 @@
-//var pColor;
 //SETS PEN COLOR
 function cRed () {
 	pColor = [239,11,11];
@@ -119,16 +118,8 @@ function promptName() {
 }
 
 function pauseTimer () {
-	
 	alert ("Game Paused");
-	
 }
-
-/* var page = require('webpage').create();
-page.open('http://github.com/', function() {
-  page.render('github.png');
-  phantom.exit();
-}); */
 
 function stopTimer (){
 	 clearTimeout(t);
