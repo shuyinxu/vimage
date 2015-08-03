@@ -57,6 +57,10 @@ function fillAll() {
 	penSize = 2000000; 
 	return penSize; 
 }
+function goBack() {
+	window.history.back();
+}
+
 //RANDOMIZES SUBJECT TO DRAW
 function getTheme(){
 	var subject = ["space: ASTRONAUT","food: APPLE","animals: CAT", "animals: HORSE", "space: MOON","food: PIZZA","park: TREE","people: JESSICA","people: ALANA","people: RACHEL","people: SHUYIN","people: TIFFANY"];
