@@ -124,11 +124,11 @@ function pauseTimer () {
 	
 }
 
-var page = require('webpage').create();
+/* var page = require('webpage').create();
 page.open('http://github.com/', function() {
   page.render('github.png');
   phantom.exit();
-});
+}); */
 
 function stopTimer (){
 	 clearTimeout(t);
@@ -142,4 +142,9 @@ function reset(){
   $("button.stop").prop("disabled", false);
 }
 
-
+$(document).ready(function(){
+    $('a.back').click(function(){
+        parent.history.back();
+        return false;
+    });
+});
