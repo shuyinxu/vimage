@@ -35,11 +35,19 @@
 			saveFrame();
 		}
 	}
+	//ClEAR CANVAS
+	void keyPressed() { 
+		if (key == 'c') {
+			context.clearRect(0, 0, canvas.width, canvas.height);
+		}
+	}
 </script>
 
 </head>
 
 <body>
+
+
 <!-- START SCREEN -->
 	<div data-role="page" id="start">
 		
@@ -115,6 +123,7 @@
 				
 				<a class="ui-btn" onclick = "startCount()" style="font-family:Raleway;">Start Timer</a>
 				<a class="ui-btn" onclick = "pauseTimer()" style="font-family:Raleway;">Pause Timer</a>
+
 				<input type="text" id="txt" style= "font-size: 48px; text-align:center; "/>
 				
 				
@@ -161,7 +170,16 @@
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div> 	
 			
+			<button onclick="goBack()">Go Back</button>
 
+<!-- Return Button -->
+
+			<script>
+			function goBack() {
+				window.history.back();
+			}
+			</script>
+			
 			</br>
 
 			<div>
