@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="Canvas.css">
 <script type="text/processing" data-processing-target="mycanvas"> 
 
+
 	void setup() { 
 		penSize = 9;
 		pColor = [0,0,0] ;
@@ -48,10 +49,28 @@
 		
 		<div data-role="main" class="ui-content background">
 			<h1> Vimage </h1>
-			<a href="#canvas" class="ui-btn" style="font-family:Raleway;">START GAME</a>
+			<a href="#canvas" class="ui-btn" style="font-family:Raleway;" onClick = "getSubjects()">START GAME</a>
 			<a href="#tutorial" class="ui-btn" style="font-family:Raleway;">HOW TO PLAY</a>
 			
 		</div>
+		<div class="demo">
+			 
+			<form action="#">
+			 
+			  <fieldset>
+				<label for="subjects">Select a Subject</label>
+				<select name="subjects" id="subjects">
+				  <option selected="selected">Choose one!</option>
+				  <option value = "1">School</option>
+				  <option value = "2">Park</option>
+				  <option value = "3">Animals</option>
+				  <option value = "4">Food</option>
+				  <option value = "5">Space</option>
+				  <option value = "6">People</option>
+				  <option value = "7">Fruits</option>
+				  <option value = "8">Celebrities</option>
+				</select>
+		</div>		
 		
 		<div data-role="footer">
 				<h2> We, the creators, hope that those who experience our game continue to share, influence, and inspire creativity around the world. </br></br> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
@@ -90,7 +109,9 @@
 			<a href="#start" data-icon="home" style="font-family:Raleway;">Go Home</a>
 			<h2>Canvas</h2> 
 			<a href="#tutorial" data-icon="info" style="font-family:Raleway;">How to Play</a>
+			
 		</div>
+		
 		
 		<div data-role="main" class="ui-content background">
 		
@@ -107,7 +128,7 @@
 			</div>	
 			
 		<p id="demo">
-		<button type="button" onclick="myFunction()">Click it for list of subjects</button>
+		
 		<script>
 		function myFunction(){
 		document.getElementById("demo").innerHTML = "<p class=menu> <li>School</li> <li> Park </li> <li> Animals</li><li> Food</li> <li> Space</li> <li> People </li>";

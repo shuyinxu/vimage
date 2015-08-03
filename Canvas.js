@@ -58,10 +58,62 @@ function fillAll() {
 	return penSize; 
 }
 //RANDOMIZES SUBJECT TO DRAW
+var space = ["astronaut","moon","planets", "solar system","space ship","rocket", "aliens","stars"];
+var food=["pizza","in and out ", "french fries", "sandwiches","cake","ice cream","steak","noodles","rice","lasagne", "salad","milk tea"];
+var fruits = ["bananas","oranges","peaches","pears","apple","tomato","pomegranate", "pineapple","cantaloupe","watermelon"]
+var animals=["cat", "horse", "giraffe","hippopotamus","stingray","sloth","worm","dog","elephant","lion","tiger","lizard","bunny","owl","duck","zebra","fish","deer","pig","chicken","cow","bear","sea horse","peacock","sheep","flamingo","penguin"];
+var park = ["tree","bench","pond","play structure","bush","flowers","birds","squirrels","humans","grass","leaves","fence","kids"];
+var people = ["jessica","alana","rachel","shuyin","tiffany"];
+var school = ["pencil", "eraser", "notebook","marker","binder","chalk board", "Teacher's Assistant", "homework", "globe","post its", ];
+var celebrities = ["Kim Kardashian","Riley Curry","Beyonce","Nicki Minaj","Justin Bieber","Drake","Zac Efron","Jennifer Lawrence","Taylor Swift"];
+var subject= [];
+
+
+
 function getTheme(){
-	var subject = ["space: ASTRONAUT","food: APPLE","animals: CAT", "animals: HORSE", "space: MOON","food: PIZZA","park: TREE","people: JESSICA","people: ALANA","people: RACHEL","people: SHUYIN","people: TIFFANY"];
+
+
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
+}
+function getSubjects () {
+	$('select[name="subjects"]').change(function(){
+  
+    if ($(this).val() == "1"){
+        subject = school;
+		return subject;
+		alert("hi");
+	}
+	else if ($(this).val() == "2"){
+        subject = park;
+		return subject;
+	}
+	else if ($(this).val() == "3"){
+        subject = animals;
+		return subject;
+	}
+	else if ($(this).val() == "4"){
+        subject = food;
+		return subject;
+	}
+	else if ($(this).val() == "5"){
+        subject =space;
+		return subject;
+	}
+	else if ($(this).val() == "7"){
+        subject =fruits;
+		return subject;
+	}
+	else if ($(this).val() == "8"){
+        subject = celebrities;
+		return subject;
+	}
+	else {
+        subject = people;
+		return subject;
+	}
+    
+});
 }
 
 //TIMER
