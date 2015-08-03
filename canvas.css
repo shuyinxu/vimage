@@ -16,7 +16,7 @@ canvas {
 	padding: 1;
 	position: relative;
 	float: center;
-	left: 323%;
+	left: 600%; /* 323 */
 }
 
 h1 {
@@ -45,8 +45,10 @@ ul {
 }
 
 .mytab {
-    width: 7% !important;  /* 12.5% for 8 tabs wide */
+    width: 10.7% !important;  /* 12.5% for 8 tabs wide */
     clear: none !important;  /* Prevent line break caused by ui-block-a */
+	display: inline-block;
+	position: static;
 }
 
 /* hover effects on pen/color options */
@@ -83,6 +85,7 @@ ul {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+
 }
 
 /* .hvr-shadow {
@@ -102,3 +105,18 @@ ul {
 .hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 } */
+/* fieldset {
+      border: 0;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+    select {
+      width: 200px;
+    }
+    .overflow {
+      height: 200px;
+    }
+
+ */
