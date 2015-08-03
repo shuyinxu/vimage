@@ -58,6 +58,7 @@ function fillAll() {
 	return penSize; 
 }
 function goBack() {
+	location.reload();
 	window.history.back();
 }
 
