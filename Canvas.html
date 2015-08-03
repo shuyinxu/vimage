@@ -35,11 +35,18 @@
 			saveFrame();
 		}
 	}
+	void keyPressed() { 
+		if (key == 'c') {
+			context.clearRect(0, 0, canvas.width, canvas.height);
+		}
+	}
 </script>
 
 </head>
 
 <body>
+
+
 <!-- START SCREEN -->
 	<div data-role="page" id="start">
 		<div data-role="main" class="ui-content background">
@@ -135,7 +142,16 @@
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div> 	
 			
+			<button onclick="goBack()">Go Back</button>
 
+			<p>Notice that clicking on the Back button here will not result in any action, because there is no previous URL in the history list.</p>
+
+			<script>
+			function goBack() {
+				window.history.back();
+			}
+			</script>
+			
 			</br>
 
 			<div>
