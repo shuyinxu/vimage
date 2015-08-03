@@ -9,7 +9,7 @@ canvas {
 	background: linear-gradient(AliceBlue, LavenderBlush);
 }
 
-#butt{
+.butt{
 	height: 70px;
     width: 70px;
 	margin: 1;

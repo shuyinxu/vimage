@@ -24,8 +24,8 @@ function cBlue () {
 	return pColor;
 }
 function cPurple () {
-		pColor = [208,131,252]; 
-		return pColor;
+	pColor = [208,131,252]; 
+	return pColor;
 	}
 function cBrown () {
 	pColor = [190,117,47]; 
