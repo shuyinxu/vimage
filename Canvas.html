@@ -19,7 +19,7 @@
 		size(700, 400); 
 		background(250,250,250);
 		frameRate(30);
-	} 
+	}
 	
 	void draw () {
 		if (mousePressed) {
@@ -35,10 +35,30 @@
 			saveFrame();
 		}
 	}
-	//ClEAR CANVAS
-	void keyPressed() { 
-		if (key == 'c') {
-			context.clearRect(0, 0, canvas.width, canvas.height);
+</script>
+
+<script type="text/processing" data-processing-target="yourcanvas"> 
+
+	void setup() { 
+		penSize = 9;
+		pColor = [0,0,0] ;
+		size(700, 400); 
+		background(250,250,250);
+		frameRate(30);
+	}
+	
+	void draw () {
+		if (mousePressed) {
+			strokeWeight(penSize);
+			stroke(pColor[0],pColor[1],pColor[2]);
+			line(mouseX, mouseY, pmouseX, pmouseY);		   
+		}
+	}
+	
+	//SAVES IMAGE
+	void keyPressed() {
+		if (key == 's') {
+			saveFrame();
 		}
 	}
 </script>
@@ -47,15 +67,14 @@
 
 <body>
 
-
 <!-- START SCREEN -->
 	<div data-role="page" id="start">
 		
 		<div data-role="main" class="ui-content background">
 			<h1> Vimage </h1>
 			<a href="#canvas" class="ui-btn" style="font-family:Raleway;">START GAME</a>
+			<a href="#freeplay" class="ui-btn" style="font-family:Raleway;">FREE PLAY</a>
 			<a href="#tutorial" class="ui-btn" style="font-family:Raleway;">HOW TO PLAY</a>
-			
 		</div>
 		
 		<div data-role="footer">
@@ -80,16 +99,7 @@
 			<h2 style="font-size:35px;text-align:left;"> Extra Features </h2>
 			<p> - To end the game, click 'End Game' at the bottom of the page.</p>
 			<p> - Save your beautiful drawing by pressing the 'S' key on your keyboard.</p>
-			
-			<!-- <h2> Subjects For The Game </h2>
-				<ul id="Vimage">
-					<li>School</li>
-					<li>Park</li>
-					<li>Animals</li>
-					<li>Food</li>
-					<li>Space</li>
-					<li>People</li>
-				</ul> -->
+			<p> - If you do not want to play game mode, choose free play and you can draw anything you want for as long as you heart desires.
 		</div>
 		
 		<div data-role="footer">
@@ -115,20 +125,12 @@
 				<h2 id="theme"></h2>
 				
 				<a class="ui-btn" onclick = "getTheme()" style="font-family:Raleway;">What do I draw?</a>
-				
+
 			</div>	
 			
 		<p id="demo">
-		<button type="button" onclick="myFunction()">Click it for list of subjects</button>
-		<script>
-		function myFunction(){
-		document.getElementById("demo").innerHTML = "<p class=menu> <li>School</li> <li> Park </li> <li> Animals</li><li> Food</li> <li> Space</li> <li> People </li>";
-	}
-	</script>
 			
 			<div>
-				<!-- <button onclick="startCount() >Start</button> -->
-				
 				<a class="ui-btn" onclick = "startCount()" style="font-family:Raleway;">Start Timer</a>
 				<a class="ui-btn" onclick = "pauseTimer()" style="font-family:Raleway;">Pause Timer</a>
 
@@ -177,17 +179,7 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div> 	
-			
-			<button onclick="goBack()">Go Back</button>
-
-<!-- Return Button -->
-
-			<script>
-			function goBack() {
-				window.history.back();
-			}
-			</script>
-			
+				
 			</br>
 
 			<div>
@@ -201,13 +193,66 @@
 			
 		</div>
 	</div>
-	<!-- <div id="countdown">
-    <div id="minutes" style="float:left">00</div>
-    <div style="float:left">:</div>
-    <div id="seconds" style="float:left">00</div>
-	</div>
+	
 	<div id="aftercount" style="display:none">Next Player</div> -->
+	
+<!-- FREEPLAY -->
+
+	<div data-role="page" id="freeplay">
+		<div data-role="header"> 
+			<a href="#start" data-icon="home" style="font-family:Raleway;">Go Home</a>
+			<h2>Free Play</h2> 
+			<a href="#tutorial" data-icon="info" style="font-family:Raleway;">How to Play</a>
+		</div>
 		
+		<div data-role="main" class="ui-content background">
+		
+			<div align="center"> 
+				<h1> Vimage </h1>
+			</div>	
+			
+			<canvas id="yourcanvas" style="border:5px double #777775;" align="center"></canvas>
+			</br>
+	<!-- COLOR OPTIONS -->
+			<div data-role="navbar">
+				<ul>
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "blue.png"onclick= "cBlue()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/> </a> </li>
+					&nbsp;&nbsp;
+					<li class="mytab"> <a id="butt"> <img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/> </a> </li>
+				</ul>
+			</div>		
+			</br>
+<!-- PEN OPTIONS -->
+
+			<div align="center">
+				<img class="hvr-grow" src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-grow" src="mediumPen.jpg" style="width:1.25em; height:1.25em;" onclick="setMedium()" >
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-grow" src="largePen.jpg" style="width:2em; height:2em;" onclick="setLarge()">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
+			</div> 	
+
+			</br>
+			<div data-role="footer">
+				<h2> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
+			</div>
+			
+		</div>
+	</div>
 	
 </body>
 
