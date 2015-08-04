@@ -60,13 +60,13 @@ function refresh () {
 }
 
 //RANDOMIZES SUBJECT TO DRAW
-var space = ["astronaut","moon", "solar system","space ship","rocket", "aliens","stars","Saturn","Uranus","Earth","Comet","Asteroid","the Big Dipper","Black Hole","North Star", "Mily Way","Sun"];
-var food=["pizza","In-N-Out ", "french fries", "sandwiches","cake","ice cream","steak","noodles","rice","lasagna", "salad","milk tea","Hot dog","Hamburger","Lollipop","Broccoli","Carrot","Sushi","Fried Chicken","Potatoes","Tacos","Burritos"];
-var fruits = ["bananas","oranges","peaches","pears","apple","tomato","pomegranate", "pineapple","cantaloupe","watermelon","Blue berries","Plums","Cherries","Kiwi","Raspberries","Cranberries","Lemon","Lime","Coconut","Honeydew",]
-var animals=["cat", "horse", "giraffe","hippopotamus","stingray","sloth","worm","dog","elephant","lion","tiger","lizard","bunny","owl","duck","zebra","fish","deer","pig","chicken","cow","bear","sea horse","peacock","sheep","flamingo","penguin","Snail"];
-var park = ["tree","bench","pond","play structure","bush","flowers","birds","squirrels","humans","grass","leaves","fence","kids","Butterfly","Rain","Campers","Deer","Fountain"];
+var space = ["Astronaut","Moon", "Solar System","Space Ship","Rocket", "Aliens","Stars","Saturn","Uranus","Earth","Comet","Asteroid","The Big Dipper","Black Hole","North Star", "Mily Way","Sun"];
+var food=["Pizza","In-N-Out ", "French Fries", "Sandwiches","Cake","Ice Cream","Steak","Noodles","Rice","Lasagna", "Salad","Milk Tea","Hot dog","Hamburger","Lollipop","Broccoli","Carrot","Sushi","Fried Chicken","Potatoes","Tacos","Burritos"];
+var fruits = ["Bananas","Oranges","Peaches","Pears","Apple","Tomato","Pomegranate", "Pineapple","Cantaloupe","Watermelon","Blue berries","Plums","Cherries","Kiwi","Raspberries","Cranberries","Lemon","Lime","Coconut","Honeydew",]
+var animals=["Cat", "Horse", "Giraffe","Hippopotamus","Stingray","Sloth","Worm","Dog","Elephant","Lion","Tiger","Lizard","Bunny","Owl","Duck","Zebra","Fish","Deer","Pig","Chicken","Cow","Bear","Sea Horse","Peacock","Sheep","Flamingo","Penguin","Snail"];
+var park = ["Tree","Bench","Pond","Play Structure","Bush","Flowers","Birds","Squirrels","Humans","Grass","Leaves","Fence","Kids","Butterfly","Rain","Campers","Deer","Fountain"];
 var GWC_People = ["Jessica","Alana","Rachel","Shuyin","Tiffany","Julie","Gloria","Trisha","Emily","J_nics","Jenny","Allison","Melody","Gretal","Emiko","Vanessa","Daniella","Arshi","Jackie","Kachi","Serena","Ruby","Jags"];
-var school = ["pencil", "eraser", "notebook","marker","binder","chalk board", "homework", "globe","post its","Backpack","Pencil sharpeners","Computer","Paper","Folder","Calculator"];
+var school = ["Pencil", "Eraser", "Notebook","Marker","Binder","Chalk Board", "Homework", "Globe","Post Its","Backpack","Pencil sharpeners","Computer","Paper","Folder","Calculator"];
 var celebrities = ["Kim Kardashian","Riley Curry","Beyonce","Nicki Minaj","Justin Bieber","Drake","Zac Efron","Jennifer Lawrence","Taylor Swift","Harry Styles","Zayn Malik","Kylie Jenner","Beyonce","Sam Smith", "Brad Pitt","Angelina Jolie",];
 var subject= [];
 
