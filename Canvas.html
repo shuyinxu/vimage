@@ -33,8 +33,6 @@
 			line(mouseX, mouseY, pmouseX, pmouseY);	
 			}
 			turn=1;
-			
-
 		}
 	}
 	
@@ -84,12 +82,13 @@
 			<h1 class="hvr-grow" style="color: white; margin-top: 5%; text-shadow: 2px 2px DarkCyan;">- Vimage -</h1>
 			
 			<ul class="menu">
-				<li> <a href="#selectsubject" class="ui-btn" style="font-family:Raleway; font-size:.4em;" onClick = "getSubjects()">PLAY</a> </li>
-				<li> <a href="#modes" class="ui-btn" style="font-family:Raleway; font-size:.4em;">OTHER GAME MODES</a> </li>
+				<li> <a href="#selectsubject" class="ui-btn" style="font-family:Raleway; font-size:.75em;" onClick = "getSubjects()">PLAY</a> </li>
 				<li> <a href="#tutorial" class="ui-btn" style="font-family:Raleway; font-size:.4em;">HOW TO PLAY</a> </li>
+				<li> <a href="#modes" class="ui-btn" style="font-family:Raleway; font-size:.4em;">OTHER GAME MODES</a> </li>
 			</ul>
+			<h3> "The world is but a canvas to our imagination" - Henry David Thoreau</h3>
 		</div>
-		<h3> "The world is but a canvas to our imagination" - Henry David Thoreau</h3>
+		
 		<div data-role="footer">
 				<h2> We, the creators, hope that those who experience our game continue to share, influence, and inspire creativity around the world.</br></br> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
 				
@@ -97,13 +96,13 @@
 	</div>
 	
 <!-- SELECT SUBJECT PAGE -->
-	<div data-role="page" id="selectsubject">
+	<div data-role="page" id="selectsubject" class="background">
 		<div data-role="header"> 
 			<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
 			<h2></h2>
 		</div>
 		
-		<div data-role="main" class="ui-content background">
+		<div data-role="main" class="ui-content">
 			<div class="demo">
 				<form action="#">
 				<fieldset>
@@ -122,9 +121,8 @@
 			</div>	
 		</div>
 		
-		<div data-role="footer" class="ui-bar">
-				<a href="#canvas" data-icon="check" style="font-family:Raleway;float:right;">Play the Game!</a>
-				
+		<div data-role="footer" class="ui-bar" style="margin-top:30%;">
+				<a href="#canvas" data-icon="check" style="font-family:Raleway; font-size: 1em; float:right;">Play the Game!</a>
 				<h2>Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
 		</div>
 	</div>
@@ -189,7 +187,7 @@
 			
 		<!-- RANDOM SUBJECT GENERATOR -->
 			<div style="display:inline-block; padding-left:1%;">
-				<a class="ui-btn flash" onclick = "getTheme()" style="font-family:Raleway; font-size:2.25em; line-height: 1.0;">Draw this: <p id="theme">(click to get subject)</p> </a>
+				<a class="ui-btn flash" onclick = "getTheme()" style="font-family:Raleway; font-size:2em; line-height: 1.0;">DRAW THIS: <p id="theme">(click to get subject)</p> </a>
 			</div>	
 			
 		<!-- TIMER -->
