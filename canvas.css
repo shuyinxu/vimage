@@ -8,6 +8,11 @@ canvas {
 .background{
 	background: linear-gradient(AliceBlue, LavenderBlush);
 }
+.title{
+	background-position:top center;
+	background-image: url("watercolor3.png"), linear-gradient(to bottom, AliceBlue, LavenderBlush);
+	background-repeat:no-repeat;
+}
 
 /* COLOR OPTION POSITIONING AND SIZING */
 .butt{
@@ -146,7 +151,7 @@ fieldset {
 /* START GAME MENU EFFECTS */
 .menu{
     padding: 0px;
-    margin: 0 0 10px 0;
+    margin: 4% 0 10px 0;
     position: relative;
 }
 .menu li{
