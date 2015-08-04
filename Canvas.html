@@ -24,12 +24,17 @@
 	
 	void draw () {
 		if (mousePressed) {
+			if (mouseX <= 0 || mouseY <=0 || mouseX >= 700 || mouseY >=450 || turn==0){
+				mousePressed = false;
+			}
+			if (turn){
 			strokeWeight(penSize);
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);	
-			if (mouseX <= 0 || mouseY <=0 || mouseX >= 700 || mouseY >=450){
-				mousePressed = false;
 			}
+			turn=1;
+			
+
 		}
 	}
 	
@@ -53,12 +58,13 @@
 	
 	void draw () {
 		if (mousePressed) {
-			strokeWeight(penSize);
-			stroke(pColor[0],pColor[1],pColor[2]);
-			line(mouseX, mouseY, pmouseX, pmouseY);
 			if (mouseX <= 0 || mouseY <=0 || mouseX >= 700 || mouseY >=450){
 				mousePressed = false;
 			}			
+		
+			strokeWeight(penSize);
+			stroke(pColor[0],pColor[1],pColor[2]);
+			line(mouseX, mouseY, pmouseX, pmouseY);
 		}
 	}
 	
@@ -78,7 +84,7 @@
 			<h1 class="hvr-grow" style="color: white; margin-top: 5%; text-shadow: 2px 2px DarkCyan;">- Vimage -</h1>
 			
 			<ul class="menu">
-				<li> <a href="#selectsubject" class="ui-btn" style="font-family:Raleway; font-size:.4em;" onClick = "getSubjects()">START GAME</a> </li>
+				<li> <a href="#selectsubject" class="ui-btn" style="font-family:Raleway; font-size:.4em;" onClick = "getSubjects()">PLAY</a> </li>
 				<li> <a href="#modes" class="ui-btn" style="font-family:Raleway; font-size:.4em;">OTHER GAME MODES</a> </li>
 				<li> <a href="#tutorial" class="ui-btn" style="font-family:Raleway; font-size:.4em;">HOW TO PLAY</a> </li>
 			</ul>
