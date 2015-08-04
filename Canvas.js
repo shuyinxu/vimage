@@ -116,7 +116,7 @@ function getSubjects () {
 }
 
 //TIMER
-var a = 20;
+var a = 25;
 var t;
 var timer_on = 0;
 var z = "TIME IS UP!"; 
@@ -132,7 +132,7 @@ function count() {
 		alert("Next Player");
 		turn=0;
 		getTheme();
-		a = 20;
+		a = 25;
 	}
 }
 
