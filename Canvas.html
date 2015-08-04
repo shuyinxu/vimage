@@ -72,15 +72,15 @@
 </head>
 
 <body>
-
 <!-- START PAGE -->
 	<div data-role="page" id="start">
 		<div data-role="main" class="ui-content background" align="center">
 			<h1 class="hvr-grow">- Vimage -</h1>
-
-			<a href="#selectsubject" class="ui-btn" style="font-family:Raleway;" onClick = "getSubjects()">START GAME</a>
-			<a href="#modes" class="ui-btn" style="font-family:Raleway;" onClick = "getSubjects()">OTHER GAME MODES</a>
-			<a href="#tutorial" class="ui-btn" style="font-family:Raleway;">HOW TO PLAY</a>
+			<ul class="menu">
+				<li> <a href="#selectsubject" class="ui-btn" style="font-family:Raleway; font-size:.4em;" onClick = "getSubjects()">START GAME</a> </li>
+				<li> <a href="#modes" class="ui-btn" style="font-family:Raleway; font-size:.4em;">OTHER GAME MODES</a> </li>
+				<li> <a href="#tutorial" class="ui-btn" style="font-family:Raleway; font-size:.4em;">HOW TO PLAY</a> </li>
+			</ul>
 		</div>
 		
 		<div data-role="footer">
@@ -128,7 +128,7 @@
 		</div>
 		
 		<div data-role="main" class="ui-content background">
-			<a href="#selectsubject" class="ui-btn" style="font-family:Raleway;">NORMAL GAME</a>
+			<a href="#selectsubject" class="ui-btn" style="font-family:Raleway;" onClick = "getSubjects()">NORMAL GAME</a>
 			<a href="#freeplay" class="ui-btn" style="font-family:Raleway;">FREE PLAY</a>
 		</div>
 		
@@ -228,14 +228,9 @@
 			</br>
 
 			<div>
-				<a class="ui-btn" onclick = "refresh()" style="font-family:Raleway;">Clear Screen</a>	
+				<a class="ui-btn" onclick = "refresh()" style="font-family:Raleway;">Reset Game</a>	
 			</div>
-			<div>
-				<a class="ui-btn" onclick = "stopTimer()" style="font-family:Raleway;"> End Game </a>
-			</div>
-
-			</br>
-
+		
 		</div>
 		<div data-role="footer">
 				<h2> Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
@@ -264,23 +259,17 @@
 		<!-- COLOR OPTIONS -->
 			<div data-role="navbar">
 				<ul>
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "blue.png"onclick= "cBlue()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:70px; height:70px;"/> </a> </li>
-					&nbsp;&nbsp;
-					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:70px; height:70px;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "blue.png"onclick= "cBlue()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="yourtab"> <a class="but"> <img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:100%; height:100%;"/> </a> </li>
 				</ul>
-			</div>		
+			</div>	
+	
 			</br>
 			
 		<!-- PEN OPTIONS -->

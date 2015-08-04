@@ -70,7 +70,6 @@ var school = ["pencil", "eraser", "notebook","marker","binder","chalk board", "h
 var celebrities = ["Kim Kardashian","Riley Curry","Beyonce","Nicki Minaj","Justin Bieber","Drake","Zac Efron","Jennifer Lawrence","Taylor Swift","Harry Styles","Zayn Malik","Kylie Jenner"];
 var subject= [];
 
-
 function getTheme(){
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
 	document.getElementById("theme").innerHTML = temp;
@@ -173,10 +172,4 @@ function stopTimer (){
 	 clearTimeout(t);
 	 document.getElementById("txt").value = "Game Over"
 	 
-}
-
-function reset(){
-  $("img").removeClass("hinge");
-  $(".status").text("");
-  $("button.stop").prop("disabled", false);
 }
