@@ -89,6 +89,7 @@
 		</div>
 	</div>
 	
+<!-- SELECT SUBJECT PAGE -->
 	<div data-role="page" id="selectsubject">
 		<div data-role="header"> 
 			<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
@@ -121,6 +122,7 @@
 		
 	</div>
 	
+<!-- OTHER GAME MODES -->
 	<div data-role="page" id="modes">
 		<div data-role="header"> 
 				<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
@@ -128,7 +130,7 @@
 		</div>
 		
 		<div data-role="main" class="ui-content background">
-			<a href="#canvas" class="ui-btn" style="font-family:Raleway;">NORMAL GAME</a>
+			<a href="#selectsubject" class="ui-btn" style="font-family:Raleway;">NORMAL GAME</a>
 			<a href="#freeplay" class="ui-btn" style="font-family:Raleway;">FREE PLAY</a>
 		</div>
 		
@@ -144,7 +146,7 @@
 		<div data-role="header"> 
 			<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
 			<h2>Tutorial</h2>
-			<a href="#canvas" data-icon="check" style="font-family:Raleway;">Play the Game!</a>
+			<a href="#selectsubject" data-icon="check" style="font-family:Raleway;">Play the Game!</a>
 		</div>
 		
 		<div data-role="main" class="ui-content background">
@@ -166,7 +168,7 @@
 		</div>
 	</div>
 	
-<!-- DRAWING CANVAS PAGE -->
+<!-- GAME PAGE -->
 	<div data-role="page" id="canvas">
 	
 		<div data-role="header"> 
@@ -252,8 +254,7 @@
 
 	<div id="aftercount" style="display:none">Next Player</div> 
 	
-<!-- FREEPLAY -->
-
+<!-- FREEPLAY MODE -->
 	<div data-role="page" id="freeplay">
 		<div data-role="header"> 
 			<a href="#start" data-icon="home" style="font-family:Raleway;">Go Home</a>
@@ -269,7 +270,8 @@
 			
 			<canvas id="yourcanvas" style="border:5px double #777775;" align="center"></canvas>
 			</br>
-	<!-- COLOR OPTIONS -->
+			
+		<!-- COLOR OPTIONS -->
 			<div data-role="navbar">
 				<ul>
 					<li class="mytab"> <a class="but"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:70px; height:70px;"/> </a> </li>
@@ -290,8 +292,8 @@
 				</ul>
 			</div>		
 			</br>
-<!-- PEN OPTIONS -->
-
+			
+		<!-- PEN OPTIONS -->
 			<div align="center">
 				<img class="hvr-grow" src="smallPen.jpg" style="width:.75em; height:.75em;" onclick="setSmall()">
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
