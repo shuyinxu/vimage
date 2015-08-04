@@ -55,9 +55,8 @@ function fillAll() {
 	penSize = 2000000; 
 	return penSize; 
 }
-function goBack() {
+function refresh () {
 	location.reload();
-	window.history.back();
 }
 
 //RANDOMIZES SUBJECT TO DRAW
