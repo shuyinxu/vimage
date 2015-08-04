@@ -166,14 +166,6 @@ function UpdateTime() {
 UpdateTime();
 var counter = setInterval(UpdateTime, 500);	
 
-function promptName() {
-	var name = prompt("Please name your piece", "");
-	if (person != null) {
-		document.getElementById("demo").innerHTML =
-		"Hello " + person + "! How are you today?";
-	}
-}
-
 function pauseTimer () {
 	alert ("Game Paused");
 }
@@ -189,10 +181,3 @@ function reset(){
   $(".status").text("");
   $("button.stop").prop("disabled", false);
 }
-
-$(document).ready(function(){
-    $('a.back').click(function(){
-        parent.history.back();
-        return false;
-    });
-});
