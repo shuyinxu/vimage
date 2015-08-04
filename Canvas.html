@@ -26,7 +26,10 @@
 		if (mousePressed) {
 			strokeWeight(penSize);
 			stroke(pColor[0],pColor[1],pColor[2]);
-			line(mouseX, mouseY, pmouseX, pmouseY);		   
+			line(mouseX, mouseY, pmouseX, pmouseY);	
+			if (mouseX <= 0 || mouseY <=0 || mouseX >= 700 || mouseY >=450){
+				mousePressed = false;
+			}
 		}
 	}
 	
@@ -53,7 +56,9 @@
 		if (mousePressed) {
 			strokeWeight(penSize);
 			stroke(pColor[0],pColor[1],pColor[2]);
-			line(mouseX, mouseY, pmouseX, pmouseY);		   
+			line(mouseX, mouseY, pmouseX, pmouseY);	
+				
+			
 		}
 	}
 	
@@ -72,9 +77,10 @@
 <!-- START PAGE -->
 	<div data-role="page" id="start">
 		<div data-role="main" class="ui-content background">
-			<h1> Vimage </h1>
+			<h1>- Vimage -</h1>
 
 			<a href="#selectsubject" class="ui-btn" style="font-family:Raleway;" onClick = "getSubjects()">START GAME</a>
+			<a href="#modes" class="ui-btn" style="font-family:Raleway;" onClick = "getSubjects()">OTHER GAME MODES</a>
 			<a href="#tutorial" class="ui-btn" style="font-family:Raleway;">HOW TO PLAY</a>
 		</div>
 		
@@ -86,8 +92,7 @@
 	<div data-role="page" id="selectsubject">
 		<div data-role="header"> 
 			<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
-			<h2>Tutorial</h2>
-			<a href="#canvas" data-icon="check" style="font-family:Raleway;">Play the Game!</a>
+			<h2></h2>
 		</div>
 		
 		<div data-role="main" class="ui-content background">
@@ -105,17 +110,33 @@
 					<option value = "6">People</option>
 					<option value = "7">Fruits</option>
 					<option value = "8">Celebrities</option>
-					<option value = "9">Randomize All</option>
 				</select>
 			</div>	
+		</div>
+		
+		<div data-role="footer" class="ui-bar">
+				<a href="#canvas" data-icon="check" style="font-family:Raleway;float:right;">Play the Game!</a>
+				<h2>Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
+		</div>
+		
+	</div>
+	
+	<div data-role="page" id="modes">
+		<div data-role="header"> 
+				<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
+				<h2>Game Modes</h2>
+		</div>
+		
+		<div data-role="main" class="ui-content background">
+			<a href="#canvas" class="ui-btn" style="font-family:Raleway;">NORMAL GAME</a>
 			<a href="#freeplay" class="ui-btn" style="font-family:Raleway;">FREE PLAY</a>
 		</div>
 		
 		<div data-role="footer">
 				<h2>Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
 		</div>
-		
 	</div>
+	
 			
 <!-- TUTORIAL PAGE -->
 	<div data-role="page" id="tutorial">
@@ -135,6 +156,7 @@
 			<h2 style="font-size:35px;text-align:left;"> Extra Features </h2>
 			<p> - To end the game, click 'End Game' at the bottom of the page.</p>
 			<p> - Save your beautiful drawing by pressing the 'S' key on your keyboard.</p>
+			<p> - To clear your canvas click the paint bucket and eraser. </p>
 			<p> - If you do not want to play game mode, choose free play and you can draw anything you want for as long as you heart desires.
 			<p> - To clear your canvas press the paint bucket first then the eraser on your canvas page. </p>
 		</div>
@@ -181,10 +203,17 @@
 			<div data-role="navbar" style="display:inline-block;">
 				<ul>
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "red.png" onClick = "cRed()" style = "width:100%; height:100%;"/> </a> </li>
+<<<<<<< HEAD
 					<li class="mytab"> <a class="butt""> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:100%; height:100%;"/> </a> </li>
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:100%; height:100%;"/> </a> </li>
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:100%; height:100%;"/> </a> </li>
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "blue.png"onclick= "cBlue()" style = "width:100%; height:100%;"/> </a> </li>
+=======
+					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "orange.png" onclick = "cOrange()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "yellow.png" onclick = "cYellow()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "green.png" onclick = "cGreen()" style = "width:100%; height:100%;"/> </a> </li>
+					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "blue.png" onclick= "cBlue()" style = "width:100%; height:100%;"/> </a> </li>
+>>>>>>> origin/master
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "brown.png" onclick = "cBrown()" style = "width:100%; height:100%;"/> </a> </li>
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "purple.png" onclick = "cPurple()" style = "width:100%; height:100%;"/> </a> </li>
 					<li class="mytab"> <a class="butt"> <img class="hvr-glow" src = "black.png" onclick = "cBlack()" style = "width:100%; height:100%;"/> </a> </li>

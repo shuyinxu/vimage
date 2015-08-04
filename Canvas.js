@@ -24,8 +24,8 @@ function cBlue () {
 	return pColor;
 }
 function cPurple () {
-		pColor = [208,131,252]; 
-		return pColor;
+	pColor = [208,131,252]; 
+	return pColor;
 	}
 function cBrown () {
 	pColor = [190,117,47]; 
@@ -68,7 +68,7 @@ var animals=["cat", "horse", "giraffe","hippopotamus","stingray","sloth","worm",
 var park = ["tree","bench","pond","play structure","bush","flowers","birds","squirrels","humans","grass","leaves","fence","kids"];
 var people = ["Jessica","Alana","Rachel","Shuyin","Tiffany"];
 var school = ["pencil", "eraser", "notebook","marker","binder","chalk board", "homework", "globe","post its", ];
-var celebrities = ["Kim Kardashian","Riley Curry","Beyonce","Nicki Minaj","Justin Bieber","Drake","Zac Efron","Jennifer Lawrence","Taylor Swift"];
+var celebrities = ["Kim Kardashian","Riley Curry","Beyonce","Nicki Minaj","Justin Bieber","Drake","Zac Efron","Jennifer Lawrence","Taylor Swift","Harry Styles","Zayn Malik","Kylie Jenner"];
 var subject= [];
 
 
