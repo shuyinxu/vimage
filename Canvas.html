@@ -59,7 +59,6 @@
 			if (mouseX <= 0 || mouseY <=0 || mouseX >= 700 || mouseY >=450){
 				mousePressed = false;
 			}			
-		
 			strokeWeight(penSize);
 			stroke(pColor[0],pColor[1],pColor[2]);
 			line(mouseX, mouseY, pmouseX, pmouseY);
@@ -130,7 +129,7 @@
 	</div>
 	
 <!-- OTHER GAME MODES -->
-	<div data-role="page" id="modes">
+	<!-- <div data-role="page" id="modes">
 		<div data-role="header"> 
 				<a href="#start" data-icon="arrow-l" style="font-family:Raleway;">Back</a>
 				<h2>Game Modes</h2>
@@ -144,7 +143,7 @@
 		<div data-role="footer">
 				<h2>Copyright &copy; 2015 by GWC-Nicki-Minaj. All Rights Reserved. </h2>
 		</div>
-	</div>
+	</div> -->
 	
 			
 <!-- TUTORIAL PAGE -->
@@ -183,7 +182,7 @@
 		
 		<div data-role="main" class="ui-content background">
 			<div align="center" class="title"> 
-				<h1 style="color: white; margin-top: 4%; text-shadow: 2px 2px DarkCyan;">- Vimage -</h1>
+				<h1 class="hvr-grow" style="color: white; margin-top: 5%; text-shadow: 2px 2px DarkCyan;">- Vimage -</h1>
 			</div>
 			
 		<!-- RANDOM SUBJECT GENERATOR -->
@@ -291,10 +290,6 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<img class="hvr-grow" src = "eraser.png" onclick = "erase()" style = "width:70px; height:70px;"/>
 			</div> 	
-			
-			<div>
-				<a class="ui-btn" onclick = "refresh()" style="font-family:Raleway;">Clear Canvas</a>	
-			</div>
 		
 		</div>
 		
