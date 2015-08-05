@@ -56,6 +56,7 @@ function fillAll() {
 	return penSize; 
 }
 function refresh () {
+	//localStorage.setItem("subject", subject);
 	location.reload();
 }
 
@@ -68,7 +69,8 @@ var park = ["Tree","Bench","Pond","Play Structure","Bush","Flowers","Birds","Squ
 var GWC_People = ["Jessica","Alana","Rachel","Shuyin","Tiffany","Julie","Gloria","Trisha","Emily","J_nics","Jenny","Allison","Melody","Gretal","Emiko","Vanessa","Daniella","Arshi","Jackie","Kachi","Serena","Ruby","Jags"];
 var school = ["Pencil", "Eraser", "Notebook","Marker","Binder","Chalk Board", "Homework", "Globe","Post Its","Backpack","Pencil sharpeners","Computer","Paper","Folder","Calculator"];
 var celebrities = ["Kim Kardashian","Riley Curry","Beyonce","Nicki Minaj","Justin Bieber","Drake","Zac Efron","Jennifer Lawrence","Taylor Swift","Harry Styles","Zayn Malik","Kylie Jenner","Beyonce","Sam Smith", "Brad Pitt","Angelina Jolie",];
-var subject= [];
+var subject= [" "];
+	
 
 function getTheme(){
 	var temp = subject[Math.floor(Math.random()*(subject.length))];
